@@ -52,6 +52,28 @@
         }
     </style>
 </head>
+
+<title>Renewed Heart & Mind Coaching — Coach Liz</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal: #3A9B93;
+      --teal-light: #EBF5F4;
+      --deep-blue: #1B3D6B;
+      --pink: #E8B4BC;
+      --warm-grey: #EFEDE9;
+      --bg: #F8F7F5;
+      --white: #ffffff;
+      --text: #1A2D3E;
+      --muted: #7A8A96;
+      --border: rgba(26,45,62,0.1);
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --radius: 1rem;
+    }
+    
 <body class="tail-container bg-slate-50 text-slate-700">
     
     <!-- NAVBAR -->
@@ -82,6 +104,22 @@
             </a>
         </div>
     </nav>
+/* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(248,247,245,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; flex-direction: column; line-height: 1.2; }
+    .nav-brand .name { font-family: var(--font-display); color: var(--deep-blue); font-size: 1.05rem; }
+    .nav-brand .tagline { color: var(--teal); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.88rem; color: var(--text); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-btn { background: var(--teal); color: #fff !important; padding: 0.55rem 1.4rem; border-radius: 2rem; font-size: 0.85rem; font-weight: 500; }
+
+    /* SECTIONS */
+    .section { padding: 5rem 1.5rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.6rem; font-weight: 500; }
+
 
     <!-- HERO -->
     <section id="home" class="hero-bg text-white pt-24 pb-20">
@@ -134,6 +172,44 @@
         </div>
     </section>
 
+ /* HERO */
+    #hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 64px; }
+    .hero-bg { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1461468611824-46457c0e11fd?w=1400&h=900&fit=crop&auto=format'); background-size: cover; background-position: center; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,45,62,0.74) 0%, rgba(27,61,107,0.52) 50%, rgba(58,155,147,0.28) 100%); }
+    .hero-content { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .hero-badge { display: inline-flex; background: rgba(232,180,188,0.22); border: 1px solid rgba(232,180,188,0.4); padding: 0.4rem 1rem; border-radius: 2rem; margin-bottom: 1.5rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink); }
+    .hero-h1 { font-family: var(--font-display); color: #fff; font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.12; margin-bottom: 1.5rem; }
+    .hero-h1 em { color: var(--pink); font-style: italic; }
+    .hero-p { color: rgba(255,255,255,0.82); font-size: 1.05rem; line-height: 1.78; margin-bottom: 2.5rem; max-width: 440px; }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--teal); color: #fff; padding: 0.85rem 1.8rem; border-radius: 2rem; font-size: 0.88rem; font-weight: 500; border: none; cursor: pointer; font-family: var(--font-body); }
+    .btn-ghost { display: inline-flex; background: rgba(255,255,255,0.15); color: #fff; padding: 0.85rem 1.8rem; border-radius: 2rem; font-size: 0.88rem; border: 1px solid rgba(255,255,255,0.25); cursor: pointer; }
+    .hero-card { background: rgba(255,255,255,0.12); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.2); border-radius: 1.25rem; padding: 2rem; }
+    .hero-card blockquote { font-family: var(--font-display); color: #fff; font-size: 1.35rem; line-height: 1.45; font-style: italic; margin-bottom: 1.5rem; }
+    .card-author { display: flex; align-items: center; gap: 0.75rem; }
+    .card-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); color: #fff; font-size: 1.1rem; }
+    .card-name { color: #fff; font-weight: 500; font-size: 0.88rem; }
+    .card-role { color: rgba(255,255,255,0.55); font-size: 0.78rem; }
+
+    /* PILLARS */
+    #pillars { background: var(--white); }
+    .center-heading { text-align: center; margin-bottom: 3.5rem; }
+    .center-heading h2 { color: var(--deep-blue); font-size: clamp(1.8rem, 4vw, 2.7rem); margin-top: 0.5rem; }
+    .cards-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; }
+    .card-icon { width: 48px; height: 48px; border-radius: 50%; background: var(--teal-light); display: flex; align-items: center; justify-content: center; margin-bottom: 1.2rem; font-size: 1.3rem; }
+    .card h3 { color: var(--deep-blue); font-size: 1.25rem; margin-bottom: 0.6rem; }
+    .card p { color: var(--muted); font-size: 0.92rem; line-height: 1.72; }
+
+    /* SPLIT */
+    .split { display: grid; grid-template-columns: 1fr 1fr; min-height: 460px; }
+    .split-img { background-image: url('https://images.unsplash.com/photo-1642543492366-a92039433543?w=800&h=600&fit=crop&auto=format'); background-size: cover; background-position: center; }
+    .split-text { background: var(--deep-blue); padding: 4rem 3rem; display: flex; align-items: center; }
+    .split-text h2 { color: #fff; font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 1.2rem; margin-top: 0.5rem; }
+    .split-text p { color: rgba(255,255,255,0.72); line-height: 1.78; font-size: 0.95rem; margin-bottom: 2rem; }
+    .link-arrow { color: var(--pink) !important; font-weight: 500; font-size: 0.9rem; }
+
+      
     <!-- TRUST BAR -->
     <div class="bg-white py-6 border-b">
         <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center items-center gap-x-12 gap-y-6 text-sm text-slate-400">
@@ -146,6 +222,15 @@
         </div>
     </div>
 
+/* TESTIMONIALS */
+    #testimonials { background: var(--warm-grey); }
+    .stars { display: flex; gap: 3px; margin-bottom: 1rem; }
+    .star { color: var(--teal); }
+    .testimonial-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; display: flex; flex-direction: column; }
+    .testimonial-card blockquote { font-family: var(--font-display); font-style: italic; color: var(--deep-blue); font-size: 1rem; line-height: 1.65; flex: 1; margin-bottom: 1.5rem; }
+    .t-name { font-weight: 500; font-size: 0.88rem; }
+    .t-role { font-size: 0.78rem; color: var(--muted); }
+      
     <!-- ABOUT -->
     <section id="about" class="section-padding bg-white">
         <div class="max-w-6xl mx-auto px-6">
@@ -188,6 +273,16 @@
         </div>
     </section>
 
+          /* OPT-IN */
+    #optin { background: var(--teal-light); text-align: center; }
+    #optin h2 { color: var(--deep-blue); font-size: clamp(1.7rem, 3.5vw, 2.4rem); margin-top: 0.5rem; margin-bottom: 1rem; }
+    #optin p { color: var(--muted); font-size: 0.95rem; line-height: 1.75; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .optin-form { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    .optin-form input { padding: 0.8rem 1.25rem; border-radius: 2rem; border: 1px solid var(--border); background: #fff; font-family: var(--font-body); font-size: 0.88rem; color: var(--text); outline: none; min-width: 240px; }
+    .optin-msg { font-family: var(--font-display); color: var(--teal); font-size: 1.2rem; margin-top: 1rem; }
+
+
+      
     <!-- SERVICES -->
     <section id="services" class="section-padding bg-slate-50">
         <div class="max-w-6xl mx-auto px-6">
@@ -259,6 +354,18 @@
             </div>
         </div>
     </section>
+
+       /* SERVICES */
+    #services { background: var(--white); }
+    .cards-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .svc-card { background: var(--teal-light); border: 1px solid rgba(26,45,62,0.08); border-radius: var(--radius); padding: 2rem; }
+    .svc-card:nth-child(even) { background: var(--warm-grey); }
+    .svc-card h3 { color: var(--deep-blue); font-size: 1.3rem; margin-bottom: 0.6rem; margin-top: 1rem; }
+    .svc-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.2rem; }
+    .svc-price { font-weight: 500; font-size: 0.9rem; color: var(--deep-blue); }
+    .svc-icon { font-size: 1.5rem; }
+    .svc-tag { background: var(--deep-blue); color: #fff; font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.65rem; border-radius: 2rem; margin-left: 0.4rem; vertical-align: middle; }
+
 
     <!-- DIGITAL PRODUCTS -->
     <section id="products" class="section-padding bg-white">
@@ -334,6 +441,23 @@
         </div>
     </section>
 
+ /* PRODUCTS */
+    #products { background: var(--bg); }
+    .prod-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+    .prod-img { height: 180px; overflow: hidden; }
+    .prod-img img { width: 100%; height: 100%; object-fit: cover; }
+    .prod-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .prod-sub { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+    .prod-body h3 { color: var(--deep-blue); font-size: 1.15rem; margin-bottom: 0.6rem; }
+    .prod-body p { color: var(--muted); font-size: 0.85rem; line-height: 1.68; flex: 1; margin-bottom: 1.25rem; }
+    .prod-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .prod-price { font-family: var(--font-display); color: var(--deep-blue); font-size: 1.4rem; }
+    .prod-old { color: var(--muted); font-size: 0.8rem; text-decoration: line-through; margin-left: 0.4rem; }
+    .btn-buy { background: var(--teal); color: #fff; padding: 0.55rem 1.2rem; border-radius: 2rem; font-size: 0.82rem; font-weight: 500; border: none; cursor: pointer; font-family: var(--font-body); transition: all 0.3s; }
+    .btn-buy.added { background: var(--teal-light); color: var(--teal); }
+    .prod-tag { display: inline-block; background: var(--deep-blue); color: #fff; font-size: 0.68rem; font-weight: 500; padding: 0.2rem 0.65rem; border-radius: 2rem; margin-bottom: 0.75rem; }
+
+      
     <!-- NEWSLETTER -->
     <section class="py-20 bg-gradient-to-r from-teal-50 to-slate-50">
         <div class="max-w-2xl mx-auto px-6 text-center">
@@ -357,6 +481,7 @@
         </div>
     </section>
 
+      
     <!-- CONTACT -->
     <section id="contact" class="section-padding bg-white">
         <div class="max-w-6xl mx-auto px-6">
@@ -392,6 +517,256 @@
                          </div> 
                       </div>
                  </div>
+
+ /* CONTACT */
+    #contact { background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 2fr 3fr; gap: 3rem; }
+    .contact-info { display: flex; flex-direction: column; gap: 1.25rem; }
+    .info-card { background: var(--bg); border-radius: var(--radius); padding: 1.75rem; }
+    .info-card.dark { background: var(--deep-blue); }
+    .info-card h3 { color: var(--deep-blue); font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .info-card.dark h3 { color: #fff; }
+    .info-card p { color: var(--muted); font-size: 0.88rem; line-height: 1.65; }
+    .info-card.dark p { color: rgba(255,255,255,0.68); }
+    .info-card .detail { font-size: 0.82rem; color: var(--teal); margin-top: 0.75rem; }
+    .form-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 2.25rem; }
+    .form-card h2 { color: var(--deep-blue); font-size: 1.5rem; margin-bottom: 0.25rem; }
+    .form-sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.83rem; font-weight: 500; margin-bottom: 0.35rem; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.72rem 1rem; border-radius: 0.75rem; border: 1px solid rgba(26,45,62,0.15); background: #fff; font-family: var(--font-body); color: var(--text); font-size: 0.9rem; outline: none; }
+    .form-group textarea { resize: vertical; }
+    .btn-submit { width: 100%; padding: 0.9rem; border-radius: 2rem; background: var(--teal); color: #fff; font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; border: none; cursor: pointer; margin-top: 0.5rem; }
+    .form-note { text-align: center; font-size: 0.76rem; color: var(--muted); margin-top: 0.75rem; line-height: 1.5; }
+    .success-box { text-align: center; padding: 3rem 2rem; }
+    .success-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-size: 1.8rem; color: #fff; }
+    .success-box h2 { color: var(--deep-blue); margin-bottom: 0.75rem; }
+    .success-box p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; max-width: 340px; margin: 0 auto; }
+
+       /* FOOTER */
+    footer { background: var(--deep-blue); padding: 4rem 1.5rem 2rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand-name { font-family: var(--font-display); color: #fff; font-size: 1.2rem; margin-bottom: 0.75rem; }
+    .footer-brand p { color: rgba(255,255,255,0.6); font-size: 0.88rem; line-height: 1.7; }
+    .footer-col h4 { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; font-weight: 500; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.62); font-size: 0.88rem; margin-bottom: 0.6rem; }
+    .footer-optin { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
+    .footer-optin input { flex: 1; padding: 0.6rem 1rem; border-radius: 2rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: var(--font-body); font-size: 0.82rem; outline: none; }
+    .footer-optin button { padding: 0.6rem 1rem; border-radius: 2rem; background: var(--teal); color: #fff; border: none; cursor: pointer; font-family: var(--font-body); font-size: 0.82rem; font-weight: 500; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; }
+    .footer-bottom p { color: rgba(255,255,255,0.38); font-size: 0.78rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero-content, .cards-3, .cards-2, .split, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      .split-img { min-height: 220px; }
+      .split-text { padding: 2.5rem 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <span class="name">Renewed Heart &amp; Mind</span>
+      <span class="tagline">Coaching with Coach Liz</span>
+    </div>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about-teaser">About</a>
+      <a href="#services">Services</a>
+      <a href="#products">Digital Guides</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-btn">Book a Session</a>
+    </div>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge">✦ Transformation Coaching</div>
+      <h1 class="hero-h1">Transform your inner world,<br><em>gently.</em></h1>
+      <p class="hero-p">I help people find clarity, compassion, and calm through emotionally intelligent tools that honor every nervous system. This is a soft place to land.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Book a Free Call →</a>
+        <a href="#about-teaser" class="btn-ghost">Meet Coach Liz</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <blockquote>"Clarity, compassion, micro-steps, and grace-based growth."</blockquote>
+      <div class="card-author">
+        <div class="card-avatar">L</div>
+        <div>
+          <div class="card-name">Coach Liz</div>
+          <div class="card-role">Transformation Coach</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pillars" class="section">
+  <div class="section-inner">
+    <div class="center-heading">
+      <div class="section-label">The Approach</div>
+      <h2>A foundation built on grace</h2>
+    </div>
+    <div class="cards-3">
+      <div class="card"><div class="card-icon">💛</div><h3>Compassion-First</h3><p>Every session is rooted in grace. You are met exactly where you are — no judgment, no pressure.</p></div>
+      <div class="card"><div class="card-icon">🌿</div><h3>Gentle Progress</h3><p>Micro-steps that honor your pace. Growth doesn't have to be dramatic to be profound.</p></div>
+      <div class="card"><div class="card-icon">✨</div><h3>Emotional Intelligence</h3><p>Practical tools that help you understand yourself, your patterns, and your relationships.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about-teaser">
+  <div class="split">
+    <div class="split-img"></div>
+    <div class="split-text">
+      <div style="max-width:420px">
+        <div class="section-label">About Coach Liz</div>
+        <h2>I believe in your capacity to grow.</h2>
+        <p>I'm Liz — Transformation Coach, emotional intelligence advocate, and gentle guide for the inner journey. I blend heart, science, and multiple perspectives into every session.</p>
+        <a href="#contact" class="link-arrow">Book a free call →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="section">
+  <div class="section-inner">
+    <div class="center-heading">
+      <div class="section-label">Client Stories</div>
+      <h2>Real words from real people</h2>
+    </div>
+    <div class="cards-3">
+      <div class="card testimonial-card"><div class="stars"><span class="star">★★★★★</span></div><blockquote>"Coach Liz helped me see myself through a kinder lens. Her approach is so gentle — I never felt rushed or judged. I finally feel like I understand my own emotions."</blockquote><div><div class="t-name">Sarah M.</div><div class="t-role">Parent &amp; Educator</div></div></div>
+      <div class="card testimonial-card"><div class="stars"><span class="star">★★★★★</span></div><blockquote>"As someone with anxiety, I was nervous about coaching. The way Liz holds space is unlike anything I've experienced. I left every session feeling clearer and calmer."</blockquote><div><div class="t-name">Jordan T.</div><div class="t-role">Young Professional</div></div></div>
+      <div class="card testimonial-card"><div class="stars"><span class="star">★★★★★</span></div><blockquote>"The digital guides are incredible — so warm and practical. I reference them weekly. This work has genuinely changed the way I show up for my kids."</blockquote><div><div class="t-name">Maya R.</div><div class="t-role">Mom of Three</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="optin" class="section">
+  <div class="section-inner" style="max-width:600px;text-align:center">
+    <div class="section-label">Stay Connected</div>
+    <h2>Gentle notes, straight to your inbox</h2>
+    <p>Join our community for thoughtful reflections on emotional intelligence, self-compassion, and practical growth.</p>
+    <div class="optin-form" id="optin-form">
+      <input type="email" id="optin-email" placeholder="your@email.com" />
+      <button class="btn-primary" onclick="submitOptin()">Subscribe</button>
+    </div>
+    <div id="optin-success" class="optin-msg" style="display:none">You're in — welcome. 🌿</div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="section-inner">
+    <div class="center-heading">
+      <div class="section-label">Coaching Services</div>
+      <h2>There's space for you here</h2>
+    </div>
+    <div class="cards-2">
+      <div class="svc-card"><div class="svc-icon">🌱</div><h3>1:1 Transformation Coaching <span class="svc-tag">Most Popular</span></h3><p>Private, deeply personalized sessions. Paced to honor your nervous system.</p><div class="svc-price">Starting at $120 / session</div></div>
+      <div class="svc-card"><div class="svc-icon">👨‍👩‍👧</div><h3>Parent &amp; Family Support</h3><p>Supporting parents in showing up with more clarity, patience, and compassion.</p><div class="svc-price">Starting at $110 / session</div></div>
+      <div class="svc-card"><div class="svc-icon">🌸</div><h3>Teen Emotional Intelligence</h3><p>Gentle, affirming coaching for teenagers. Warm, judgment-free, meets teens where they are.</p><div class="svc-price">Starting at $95 / session</div></div>
+      <div class="svc-card"><div class="svc-icon">✨</div><h3>EQ Deep Dive <span class="svc-tag">4-Session Package</span></h3><p>A focused four-session journey through self-awareness, regulation, empathy, and relationships.</p><div class="svc-price">$420 (save $60)</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="section">
+  <div class="section-inner">
+    <div class="center-heading">
+      <div class="section-label">Digital Guides</div>
+      <h2>Tools for your inner journey</h2>
+    </div>
+    <div class="cards-3">
+      <div class="prod-card"><div class="prod-img"><img src="https://images.unsplash.com/photo-1642543492366-a92039433543?w=600&h=400&fit=crop&auto=format" alt="Workbook" /></div><div class="prod-body"><div class="prod-tag">Best Seller</div><div class="prod-sub">Self-Guided Digital Guide</div><h3>The Emotional Clarity Workbook</h3><p>A 40-page guided journey through your emotional landscape with reflection prompts and exercises.</p><div class="prod-footer"><div><span class="prod-price">$24</span></div><button class="btn-buy" onclick="addToCart(this)">Get Guide</button></div></div></div>
+      <div class="prod-card"><div class="prod-img"><img src="https://images.unsplash.com/photo-1660324197196-69580168711e?w=600&h=400&fit=crop&auto=format" alt="Journal" /></div><div class="prod-body"><div class="prod-sub">Daily Reflection Guide</div><h3>Grace-Based Growth Journal</h3><p>A 30-day journaling practice designed for the sensitive heart. Gentle prompts and affirmations.</p><div class="prod-footer"><div><span class="prod-price">$18</span></div><button class="btn-buy" onclick="addToCart(this)">Get Guide</button></div></div></div>
+      <div class="prod-card"><div class="prod-img"><img src="https://images.unsplash.com/photo-1606997875311-857add95bca0?w=600&h=400&fit=crop&auto=format" alt="Bundle" /></div><div class="prod-body"><div class="prod-tag">Best Value</div><div class="prod-sub">Two-Guide Collection</div><h3>EQ Starter Bundle</h3><p>Both guides plus a bonus 20-minute strategy session. Your complete emotional intelligence toolkit.</p><div class="prod-footer"><div><span class="prod-price">$36</span> <span class="prod-old">$42</span></div><button class="btn-buy" onclick="addToCart(this)">Get Bundle</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="section-inner">
+    <div class="center-heading">
+      <div class="section-label">Get in Touch</div>
+      <h2 style="color:var(--deep-blue)">Let's connect</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="info-card dark"><h3>Book a Free Discovery Call</h3><p>A 20-minute, no-pressure conversation to see if we're a good fit. Completely free, completely gentle.</p><div class="detail">🕐 20 minutes · Video or phone</div></div>
+        <div class="info-card"><h3>Email</h3><p>hello@renewedheartandmind.com</p></div>
+        <div class="info-card" style="background:var(--teal-light)"><h3>Response Time</h3><p>I respond to all inquiries within 1–2 business days. Your message matters.</p></div>
+      </div>
+      <div class="form-card" id="form-container">
+        <h2>Send a message</h2>
+        <p class="form-sub">All fields marked * are required.</p>
+        <form onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group"><label>Your name *</label><input type="text" required placeholder="First name" /></div>
+            <div class="form-group"><label>Email address *</label><input type="email" required placeholder="your@email.com" /></div>
+          </div>
+          <div class="form-group"><label>What brings you here? *</label><select required><option value="">Select a reason…</option><option>Book a 1:1 coaching session</option><option>Book a free discovery call</option><option>Teen or parent coaching inquiry</option><option>Question about digital guides</option><option>General question</option></select></div>
+          <div class="form-group"><label>Your message *</label><textarea rows="5" required placeholder="Share a little about where you are and what you're hoping for…"></textarea></div>
+          <div class="form-group"><label>How did you hear about us?</label><input type="text" placeholder="Instagram, referral, Google…" /></div>
+          <button type="submit" class="btn-submit">Send Message</button>
+          <p class="form-note">Your information is safe and will never be shared. This is a judgment-free space.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-brand-name">Renewed Heart &amp; Mind</div><p>Gentle, practical, emotionally intelligent coaching that honors every nervous system.</p></div>
+      <div class="footer-col"><h4>Navigate</h4><a href="#hero">Home</a><a href="#about-teaser">About Coach Liz</a><a href="#services">Coaching Services</a><a href="#products">Digital Guides</a><a href="#contact">Contact</a></div>
+      <div class="footer-col"><h4>Stay Connected</h4><p style="color:rgba(255,255,255,0.6);font-size:0.85rem">Gentle notes on emotional intelligence, growth, and grace.</p><div class="footer-optin"><input type="email" placeholder="your@email.com" /><button onclick="this.textContent='✓'">Join</button></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Renewed Heart &amp; Mind Coaching. All rights reserved.</p><p>Made with 💗 for every nervous system</p></div>
+  </div>
+</footer>
+
+<script>
+  function submitOptin() {
+    const email = document.getElementById('optin-email').value;
+    if (!email) return;
+    document.getElementById('optin-form').style.display = 'none';
+    document.getElementById('optin-success').style.display = 'block';
+  }
+
+  function addToCart(btn) {
+    const isBundle = btn.closest('.prod-body').querySelector('h3').textContent.includes('Bundle');
+    btn.textContent = '✓ Added!';
+    btn.classList.add('added');
+    setTimeout(() => { btn.textContent = isBundle ? 'Get Bundle' : 'Get Guide'; btn.classList.remove('added'); }, 2000);
+  }
+
+  function submitForm(e) {
+    e.preventDefault();
+    document.getElementById('form-container').innerHTML = '<div class="success-box"><div class="success-icon">✓</div><h2>Message received</h2><p>Thank you for reaching out. Coach Liz will be in touch within 1–2 business days. You\'ve taken a meaningful step.</p></div>';
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
 
     <!-- FOOTER -->
     <footer class="bg-slate-900 text-slate-400">
