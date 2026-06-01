@@ -730,44 +730,6 @@
   </div>
 </section>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand"><div class="footer-brand-name">Renewed Heart &amp; Mind</div><p>Gentle, practical, emotionally intelligent coaching that honors every nervous system.</p></div>
-      <div class="footer-col"><h4>Navigate</h4><a href="#hero">Home</a><a href="#about-teaser">About Coach Liz</a><a href="#services">Coaching Services</a><a href="#products">Digital Guides</a><a href="#contact">Contact</a></div>
-      <div class="footer-col"><h4>Stay Connected</h4><p style="color:rgba(255,255,255,0.6);font-size:0.85rem">Gentle notes on emotional intelligence, growth, and grace.</p><div class="footer-optin"><input type="email" placeholder="your@email.com" /><button onclick="this.textContent='✓'">Join</button></div></div>
-    </div>
-    <div class="footer-bottom"><p>© 2026 Renewed Heart &amp; Mind Coaching. All rights reserved.</p><p>Made with 💗 for every nervous system</p></div>
-  </div>
-</footer>
-
-<script>
-  function submitOptin() {
-    const email = document.getElementById('optin-email').value;
-    if (!email) return;
-    document.getElementById('optin-form').style.display = 'none';
-    document.getElementById('optin-success').style.display = 'block';
-  }
-
-  function addToCart(btn) {
-    const isBundle = btn.closest('.prod-body').querySelector('h3').textContent.includes('Bundle');
-    btn.textContent = '✓ Added!';
-    btn.classList.add('added');
-    setTimeout(() => { btn.textContent = isBundle ? 'Get Bundle' : 'Get Guide'; btn.classList.remove('added'); }, 2000);
-  }
-
-  function submitForm(e) {
-    e.preventDefault();
-    document.getElementById('form-container').innerHTML = '<div class="success-box"><div class="success-icon">✓</div><h2>Message received</h2><p>Thank you for reaching out. Coach Liz will be in touch within 1–2 business days. You\'ve taken a meaningful step.</p></div>';
-  }
-
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-    });
-  });
-
     <!-- FOOTER -->
     <footer class="bg-slate-900 text-slate-400">
         <div class="max-w-6xl mx-auto px-6 py-20">
